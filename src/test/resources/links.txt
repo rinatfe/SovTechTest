@@ -1,0 +1,4 @@
+http://google.com
+http://google.com/?search=AI#result
+http://google.com/ search
+Not a url
