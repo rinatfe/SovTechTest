@@ -1,5 +1,6 @@
 package tests.api;
 
+import enums.URLs;
 import io.restassured.RestAssured;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
@@ -13,7 +14,7 @@ public class RandomUserTest {
 
     @BeforeAll
     public static void setup() {
-        RestAssured.baseURI = "https://randomuser.me/api/";
+        RestAssured.baseURI = URLs.RANDOM_USER.getUrl();
     }
     @Test
     public void withGenderMaleTest() {

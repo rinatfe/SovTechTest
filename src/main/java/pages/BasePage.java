@@ -30,4 +30,9 @@ public class BasePage<Page extends BasePage<Page>> {
         Assertions.assertEquals(expectedUrl,currentUrl, "Url: " + expectedUrl + " не совпадает с текущим");
         return (Page) this;
     }
+
+    public Page clickButton(String buttonName) {
+        $x("//button[.='%s']".formatted(buttonName)).shouldBe(Condition.visible).click();
+        return (Page) this;
+    }
 }
